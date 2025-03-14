@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    position: relative;
+    max-width: 150px;
+}
+
+header .navegaçao ul {
+    position: relative;
+    display: flex;
+}
+
+header .navegaçao li {
+    list-style: none;
+}
+
+header .navegaçao li a {
+    color: rgb(253, 77, 121);
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 19px;
+    margin-left: 100px;
+}
+
+/* estilização do formulário */
+.form-container {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    width: 600px;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin: 120px auto 0; /* Ajuste para evitar sobreposição */
+}
+
+.form-container input.full-width {
+    width: 100%;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: rgb(253, 77, 121);
+}
+
+.form-container .input-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container input{
+    width: 48%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-container button {
+    background: rgb(253, 77, 121);
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background: rgb(200, 50, 90);
+}
+
+.radio-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.radio-group label {
+    display: block;
+    margin: 5px 0;
+}
+
+

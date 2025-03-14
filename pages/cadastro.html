@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../CSS/cadastro.css">
+</head>
+<body>
+
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="../assets/IMAGENS/Connect Gamers logo OFICIAL.jpg" alt="logo" class="logo"/a>
+            <nav class="navegaçao">
+                <ul>
+                    <li><a href="../index.html">Página Inicial</a></li>
+                    <li><a href="../pages/pesquisa.html">Pesquisa e Dados</a></li>
+                    <li><a href="../pages/eventos.html">Jogos e Eventos</a></li>
+                    <li><a href="../pages/cadastro.html">Cadastro</a></li>
+                    <li><a href="../pages/FAQ.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="form-container">
+            <h2>Cadastre seu Squad!</h2>
+            <form>
+                <input type="text" class="full-width" placeholder="Nome do Squad" required>
+        
+                <div class="input-group">
+                    <input type="text" placeholder="Participante 1">
+                    <input type="text" placeholder="Participante 2">
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Participante 3">
+                    <input type="text" placeholder="Participante 4">
+                </div>
+                
+                <select required>
+                    <option value="" disabled selected>Selecione um jogo</option>
+                    <option value="jogo1">Fortnite</option>
+                    <option value="jogo2">Valorant</option>
+                    <option value="jogo3">Counter Strike</option>
+                    <option value="jogo4">League of Legends</option>
+                </select>
+                
+                <div class="radio-group">
+                    <p>Escolha o nível do seu squad:</p>
+                    <label><input type="radio" name="nivel" value="iniciante"> Iniciante</label>
+                    <label><input type="radio" name="nivel" value="intermediario"> Intermediário</label>
+                    <label><input type="radio" name="nivel" value="avancado"> Avançado</label>
+                </div>
+                
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+
+    </section>
+
+</body>
+</html>
