@@ -60,11 +60,7 @@ header .navegaçao li a {
     text-align: center;
     color: white;
     position: relative;
-    margin: 120px auto 0; /* Ajuste para evitar sobreposição */
-}
-
-.form-container input.full-width {
-    width: 100%;
+    margin: 120px auto 0;
 }
 
 .form-container h2 {
@@ -72,18 +68,28 @@ header .navegaçao li a {
     color: rgb(253, 77, 121);
 }
 
-.form-container .input-group {
-    display: flex;
-    justify-content: space-between;
+.form-container input.full-width {
+    width: 100%;
 }
 
-.form-container input{
-    width: 48%;
+/* Inputs dos participantes agora ficam empilhados */
+.form-container .input-group {
+    display: block;
+}
+
+.form-container input {
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    background: #333; /* Cinza escuro para destacar no formulário */
+    color: white;
+}
+
+.form-container input::placeholder {
+    color: #bbb; /* Deixa o placeholder mais suave */
 }
 
 .form-container select {
@@ -93,6 +99,8 @@ header .navegaçao li a {
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    background: #333; /* Mantendo o tom de cinza nos selects */
+    color: white;
 }
 
 .form-container button {
@@ -104,6 +112,7 @@ header .navegaçao li a {
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s ease-in-out; /* Efeito de transição suave */
 }
 
 .form-container button:hover {
@@ -113,11 +122,19 @@ header .navegaçao li a {
 .radio-group {
     margin: 15px 0;
     text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre os itens */
+}
+
+.radio-group p {
+    margin: 0;
+    font-weight: bold;
 }
 
 .radio-group label {
-    display: block;
-    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaço entre o radio button e o texto */
+    margin: 0;
 }
-
-
