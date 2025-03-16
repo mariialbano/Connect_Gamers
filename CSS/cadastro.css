@@ -72,7 +72,6 @@ header .navegaçao li a {
     width: 100%;
 }
 
-/* Inputs dos participantes agora ficam empilhados */
 .form-container .input-group {
     display: block;
 }
@@ -84,12 +83,12 @@ header .navegaçao li a {
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    background: #333; /* Cinza escuro para destacar no formulário */
+    background: #333; 
     color: white;
 }
 
 .form-container input::placeholder {
-    color: #bbb; /* Deixa o placeholder mais suave */
+    color: #bbb; 
 }
 
 .form-container select {
@@ -99,7 +98,7 @@ header .navegaçao li a {
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    background: #333; /* Mantendo o tom de cinza nos selects */
+    background: #333; 
     color: white;
 }
 
@@ -112,7 +111,7 @@ header .navegaçao li a {
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease-in-out; /* Efeito de transição suave */
+    transition: background 0.3s ease-in-out; /* Efeito de transição */
 }
 
 .form-container button:hover {
