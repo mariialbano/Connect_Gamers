@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    position: relative;
+    max-width: 150px;
+}
+
+header .navegaçao ul {
+    position: relative;
+    display: flex;
+}
+
+header .navegaçao li {
+    list-style: none;
+}
+
+header .navegaçao li a {
+    color: rgb(253, 77, 121);
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 19px;
+    margin-left: 100px;
+}
+
+/*Parte de Jogos*/
+
+.pagina-inteira{
+    width: 100%;
+    justify-content: center; 
+    text-align: center;
+}
+
+.container-pagina-jogos {
+    
+    margin-top: 10rem;   
+}
+
+.container-titulo-jogos {
+    justify-content: center;   
+}
+
+.titulo-jogos {
+    font-family: Arial, Helvetica, sans-serif;  
+    text-transform: uppercase;
+    font-size: 35px;
+    color: rgb(253, 77, 121);
+}
+
+.container-jogos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid rgb(253, 77, 121);
+    border-radius: 25px;  
+    margin: 18px;
+}
+
+.jogos { 
+    width: 20%;    
+    height: auto;
+    padding: 15px;
+    min-width: 175px;
+    max-width: 285px;
+    border-radius: 25px;;
+}
+
+/*Parte de Eventos*/
+
+.container-pagina-eventos{
+    margin-top: 7rem;   
+}
+
+.container-titulo-eventos {
+    justify-content: center; 
+    margin-bottom: -10px;  
+}
+
+.titulo-eventos {
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: rgb(253, 77, 121);
+}
+
+.container-eventos{
+    display: flex;
+    justify-content: center;
+    margin: 18px;
+}
+
+.eventos-titulos-jogos {    
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: rgb(253, 77, 121);
+}
+
+h3 {
+    display: flex;
+    justify-content: center;       
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    padding-bottom: 8px;
+    color: rgb(253, 77, 121);
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    min-width: 100px;
+    color: white
+}   
+
+.nomes-jogos{
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(253, 77, 121);
+    border-radius: 20px;  
+}
