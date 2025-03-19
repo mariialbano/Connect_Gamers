@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/faq.css">
+    <title>Feedback</title>
+    <style>
+        /* Seus estilos atuais aqui */
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <a href="#"><img src="../assets/IMAGENS/Connect Gamers logo OFICIAL.jpg" alt="logo" class="logo"/a>
+            <nav class="navegaçao">
+                <ul>
+                    <li><a href="../index.html">Página Inicial</a></li>
+                    <li><a href="../pages/pesquisa.html">Pesquisa e Dados</a></li>
+                    <li><a href="../pages/eventos.html">Jogos e Eventos</a></li>
+                    <li><a href="../pages/cadastro.html">Cadastro</a></li>
+                    <li><a href="../pages/FAQ.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Div para centralizar a frase e o container -->
+        <div class="centralizado">
+            <h1>Formulário enviado com sucesso!</h1>
+            <div class="container">
+                <h2>Seu Feedback é importante para nós!</h2>
+                <form action="obrigado.html" method="GET">
+                    <div class="star-rating">
+                        <!-- Estrelas de avaliação -->
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5">&#9733;</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">&#9733;</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">&#9733;</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">&#9733;</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">&#9733;</label>
+                    </div>
+                    <!-- Campo de texto para feedback -->
+                    <textarea name="feedback" id="feedback" placeholder="Deixe seu Feedback"></textarea>
+                    <!-- Botão de envio -->
+                    <button type="submit">Enviar Feedback</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
