@@ -6,6 +6,7 @@
 }
 
 body {
+    font-family: Barlow, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +26,6 @@ section {
 }
 
 header {
-    font-family: Barlow, sans-serif;
     position: absolute;
     top: 0;
     left: 0;
@@ -119,9 +119,11 @@ textarea {
     border: 1px solid #ccc;
     resize: none;
     box-sizing: border-box;
+    font-family: Barlow, sans-serif;
 }
 
 button {
+    font-family: Barlow, sans-serif;
     width: 100%;
     padding: 10px;
     margin-top: 10px;
