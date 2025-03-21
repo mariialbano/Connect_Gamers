@@ -17,17 +17,20 @@ section {
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    padding-top: 100px; /*para o menu ficar fixado corretamente*/
 }
 
 header {
-    position: absolute;
+    position: fixed; /* Mantém o header fixo no topo */
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 100px;
+    background: black; 
+    padding: 20px 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1000; /* Mantém o header sobre os outros elementos */ 
 }
 
 header .logo {
@@ -141,6 +144,22 @@ header .navegaçao li a {
     gap: 5px; /* Espaço entre o radio button e o texto */
     margin: 0;
 }
+
+/* estilização do rodapé */
+.footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 14px;
+    border-top: 2px solid rgb(253, 77, 121);
+    box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
 
 /* @media para trazer responsividade */
 @media (max-width: 1200px) {

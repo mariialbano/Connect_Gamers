@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
+    font-family: Barlow, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body{
+    padding-top: 80px; /* empurrar o conteúdo para baixo para parecer o h2 na página */
+}
+
 section {
-    font-family:Barlow;
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -16,6 +20,7 @@ section {
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    padding-top: 100px;
 }
 
 .circle {
@@ -29,14 +34,16 @@ section {
 }
 
 header {
-    position: absolute;
+    position: fixed; /* Mantém o header fixo no topo */
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 100px;
+    background: black; 
+    padding: 20px 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1000; /* Mantém o header sobre os outros elementos */ 
 }
 
 header .logo {
@@ -91,6 +98,21 @@ header .navegaçao li a {
 
 .container .texto p {
     color: rgb(219, 219, 219);
+}
+
+/* estilização do rodapé */
+.footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 14px;
+    border-top: 2px solid rgb(253, 77, 121);
+    box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.footer p {
+    margin: 5px 0;
 }
 
 /* Media Queries para Responsividade */
