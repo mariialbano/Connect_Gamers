@@ -117,7 +117,7 @@ header .navegaçao li a {
 .container-eventos{
     display: flex;
     justify-content: center;
-    margin: 18px;
+    margin: 18px;z
 }
 
 .eventos-titulos-jogos {    
