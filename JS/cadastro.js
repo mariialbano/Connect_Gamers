@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () { // Manipulação do DOM para interações em tempo real
     const jogoSelecao = document.getElementById("jogo-selecao");
     const eventoContainer = document.getElementById("evento-container");
-    const form = document.querySelector("form"); // Seleciona o formulário
-    const formContainer = document.querySelector(".form-container"); // Container do formulário
+    const form = document.getElementById("formulario"); // Seleciona o formulário
+    const formContainer = document.getElementById("form-container2"); // Container do formulário
+  
 
     // Eventos para cada jogo
     const eventosPorJogo = {
@@ -42,16 +43,16 @@ document.addEventListener("DOMContentLoaded", function () { // Manipulação do 
     form.addEventListener("submit", function (event) { // Validação do formulário ao submeter
         event.preventDefault(); // Evita recarregar a página
 
-        const nomeSquad = document.querySelector(".full-width").value.trim();
+        const nomeSquad = document.getElementById("squad-name").value.trim();
         if (nomeSquad.length < 3) {
             alert("O nome do squad deve ter pelo menos 3 caracteres!");
-            return; // Interrompe o processo caso o nome do squad seja inválido
+            return;
         }
 
         const successMessage = document.createElement("div"); // Criar a nova tela de sucesso
         successMessage.classList.add("success-message");
         successMessage.innerHTML = `
-            <h2>Formulário enviado com sucesso!</h2>
+            <h2>Cadastro realizado com sucesso!</h2>
             <p>Você será redirecionado para a página de Feedback em <span id="contador">5</span> segundos.</p>
         `;
 
