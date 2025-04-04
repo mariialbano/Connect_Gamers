@@ -36,14 +36,16 @@
                     <input type="text" placeholder="Participante 5">
                 </div>
         
-                <select required>
+                <select id="jogo-selecao" required>
                     <option value="" disabled selected>Selecione um jogo</option>
-                    <option value="jogo1">Fortnite</option>
-                    <option value="jogo2">Valorant</option>
-                    <option value="jogo3">Counter Strike</option>
-                    <option value="jogo4">Rocket League</option>
-                    <option value="jogo4">League of Legends</option>
+                    <option value="fortnite">Fortnite</option>
+                    <option value="valorant">Valorant</option>
+                    <option value="cs">Counter Strike</option>
+                    <option value="rocket-league">Rocket League</option>
+                    <option value="lol">League of Legends</option>
                 </select>
+
+                <div id="evento-container"></div> 
         
                 <div class="radio-group" required>
                     <p>Escolha o nível do seu squad:</p>
@@ -63,5 +65,6 @@
         <p>Desenvolvido por: Ana Gonçalves, Jessica Brito, Mariana Albano, Neemias Silva, Vinícius Gonzales.</p>
     </footer>
 
+    <script src="../JS/cadastro.js"></script>
 </body>
 </html>
