@@ -94,6 +94,22 @@ header .navegaçao li a {
     color: rgb(219, 219, 219);
 }
 
+.btn-primary {
+    background-color: rgb(253, 77, 121);
+    border-color: rgb(253, 77, 121);
+    border-radius: 50px; /* Circular border */
+    padding: 10px 20px; /* Ajustando o botão */
+    color: white; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: rgb(220, 60, 100); /* Slightly darker shade for hover effect */
+    border-color: rgb(220, 60, 100);
+}
+
 /* estilização do rodapé */
 .footer {
     background: #1a1a1a;
