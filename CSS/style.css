@@ -110,6 +110,18 @@ header .navegaçao li a {
     border-color: rgb(220, 60, 100);
 }
 
+.btn-primary:active {
+    background-color: rgb(220, 60, 100) !important; /* Reset to original color on click */
+    border-color: rgb(253, 77, 121) !important;
+}
+
+.btn-primary:focus {
+    background-color: rgb(220, 60, 100);
+    border-color: rgb(220, 60, 100);
+    box-shadow: 0 0 0 0.2rem rgba(253, 77, 121, 0.5); /* Custom focus outline */
+}
+
+
 /* estilização do rodapé */
 .footer {
     background: #1a1a1a;
