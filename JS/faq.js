@@ -17,7 +17,6 @@ document.getElementById('feedback-form').addEventListener('submit', function(e) 
     });
 });
 
-
 const style = document.createElement('style');
 style.textContent = `
     .confirmation-card {
@@ -56,3 +55,4 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
