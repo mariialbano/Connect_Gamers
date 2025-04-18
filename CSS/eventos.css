@@ -1,21 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css'; /* Importando o Bootstrap */
 
 * {
     font-family: Barlow, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
+.navbar-nav .nav-item {
+    margin-right: 100px; /* Espaçamento entre os itens da nav bar */
+}
+
+/* header da pagina */
 section {
     position: relative;
     width: 100%;
     min-height: 100vh;
     padding: 100px;
-    background: black;
+    background: #212529;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
     overflow: hidden;
     padding-top: 100px;
 }
@@ -56,105 +59,143 @@ header .navegaçao li a {
     margin-left: 100px;
 }
 
-/*Parte de Jogos*/
-
+/* estiliza o conteúdo inteiro da pagina de eventos e jogos  */
 .pagina-inteira{
-    width: 100%;
-    justify-content: center; 
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
 }
 
+/*parte de jogos*/
 .container-pagina-jogos {
-    
-    margin-top: 10rem;   
+    margin: 3rem 7rem 0 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    margin-top: 5rem;
 }
 
-.container-titulo-jogos {
-    justify-content: center;   
-}
-
-.titulo-jogos {
-    text-transform: uppercase;
-    font-size: 30px;
-    color: rgb(253, 77, 121);
-}
-
+/* container das imagens */
 .container-jogos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 1px solid rgb(253, 77, 121);
-    border-radius: 25px;  
-    margin: 18px;
+    background: #1a1a1a;
+    margin: 18px 60px 0 0;
+    padding: 18.5px;
+    position: sticky;
+    border: 2px solid rgb(253, 77, 121, 0.3);
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 4px rgb(253, 77, 121, 0.3);
 }
 
-.jogos { 
-    width: 20%;    
+/* Imagens dos jogos */
+.imagem-jogos {
     height: auto;
+    width: 20%;
     padding: 15px;
-    min-width: 175px;
-    max-width: 285px;
-    border-radius: 25px;;
+    min-width: 170px;
+    max-width: 270px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
-/*Parte de Eventos*/
-
-.container-pagina-eventos{
-    margin-top: 7rem;   
+.imagem-jogos:hover {
+    transform: scale(1.07); /* aumenta para 110% enquanto o mouse estiver sobre */
+    transition: transform 0.3s ease;
 }
 
-.container-titulo-eventos {
-    justify-content: center; 
-    margin-bottom: -10px;  
-}
+/* parte de eventos */
 
-.titulo-eventos {
-    text-transform: uppercase;
-    font-size: 30px;
-    color: rgb(253, 77, 121);
-}
-
-.container-eventos{
-    display: flex;
+/* container das imagens */
+.container-eventos {
     justify-content: center;
-    margin: 18px;z
-}
-
-.eventos-titulos-jogos {    
-    list-style: none;
-    font-size: 30px;
-    color: rgb(253, 77, 121);
-}
-
-h3 {
     display: flex;
-    justify-content: center;       
-    font-size: 25px;
-    padding-bottom: 8px;
-    color: rgb(253, 77, 121);
-}
-
-li {
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-    min-width: 100px;
-    color: white
-}   
-
-.nomes-jogos{
     flex-wrap: wrap;
-    justify-content: center; 
+    flex-direction: column;
     align-items: center;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid rgb(253, 77, 121);
-    border-radius: 20px;  
+    background: #1a1a1a;
+    padding: 20px 20px 20px 20px;
+    border-radius: 15px;
+    margin: 65px 0;
+    position: sticky;
+    border: 2px solid rgb(253, 77, 121, 0.3);
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 4px rgb(253, 77, 121, 0.3);
+}
+
+/* efeitos do containers de eventos */
+.container-eventos-efeitos{
+    display: none;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+/* efeito de abrir */
+.container-eventos-efeitos.abrindo {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* efeito de fechar */
+.container-eventos-efeitos.fechando {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.eventos {
+    list-style: none;
+    margin: 10px 0 22px 0;
+    padding: 0;
+}
+
+/* estilização do texto dos jogos */
+.nomes-jogos {
+    align-items: center;
+    color: rgb(253, 77, 121);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.texto-eventos {
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+.posicao-texto-eventos {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+/* estilização do botão de cadastro */
+.botao-cadastro {
+    background-color: rgb(253, 77, 121);
+    color: white;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+muda a cor do botão de cadastro quando o mouse passa por cima
+.botao-cadastro:hover {
+    background-color: rgb(192, 60, 93);
+    color: rgb(205, 205, 205);
 }
 
 /* estilização do rodapé */
 .footer {
-    background: #1a1a1a;
     color: white;
     text-align: center;
     padding: 15px 10px;
@@ -165,4 +206,131 @@ li {
 
 .footer p {
     margin: 5px 0;
+}
+
+/* abrindo os eventos */
+@keyframes crescer {
+    from {
+    transform: scale(0);
+    opacity: 0;
+    }
+    to {
+    transform: scale(1);
+    opacity: 1;
+    }
+}
+
+/* fechando os eventos */
+@keyframes encolher {
+    from {
+    transform: scale(1);
+    opacity: 1;
+    }
+    to {
+    transform: scale(0);
+    opacity: 0;
+    }
+}
+
+/* @media para trazer responsividade */
+@media (max-width: 1200px) {
+    header {
+        padding: 40px 50px;
+    }
+
+    header .navegaçao li a {
+        margin-left: 50px;
+    }
+
+    .container .texto {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 992px) {
+    section {
+        padding: 80px 50px;
+    }
+
+    header {
+        padding: 30px 50px;
+    }
+
+    header .navegaçao li a {
+        margin-left: 30px;
+        font-size: 17px;
+    }
+
+    .container .texto {
+        max-width: 400px;
+    }
+
+    .container .texto h2 {
+        font-size: 0.9em;
+    }
+
+    .container .texto h2 span {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 30px;
+    }
+
+    header {
+        padding: 20px 30px;
+    }
+
+    header .navegaçao li a {
+        margin-left: 20px;
+        font-size: 16px;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container .texto {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .container .texto h2 {
+        font-size: 0.8em;
+    }
+
+    .container .texto h2 span {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 40px 20px;
+    }
+
+    header {
+        padding: 15px 20px;
+    }
+
+    header .logo {
+        max-width: 100px;
+    }
+
+    header .navegaçao li a {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+
+    .container .texto h2 {
+        font-size: 0.7em;
+    }
+
+    .container .texto h2 span {
+        font-size: 1.1em;
+    }
 }
