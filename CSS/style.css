@@ -4,6 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Barlow, sans-serif;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 100px; /* Espaçamento entre os itens da nav bar */
 }
 
 section {
