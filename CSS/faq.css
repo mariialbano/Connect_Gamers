@@ -7,12 +7,18 @@
     font-family: Barlow, sans-serif;
 }
 
-
 /* Espaçamento entre os itens da navabar */
 .navbar-nav .nav-item {
     margin-right: 100px;
 }
 
+section {
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+}
+/* estilização do formulário */
 /* Container*/
 .custom-container {
     background-color: beige;
@@ -84,7 +90,6 @@ textarea {
 
 /* estilização do rodapé */
 .footer {
-    background: #1a1a1a;
     color: white;
     text-align: center;
     padding: 15px 10px;
@@ -105,15 +110,6 @@ body, html {
     min-height: 100vh;
 }
 
-.content-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    padding-top: 80px; 
-    padding-bottom: 5px; 
-}
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
