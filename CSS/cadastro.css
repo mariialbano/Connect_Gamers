@@ -7,6 +7,12 @@
     padding: 0;
 }
 
+section {
+    min-height: 100vh;
+    padding-top: 100px;
+    align-items: center;
+}
+
 .navbar-nav .nav-item {
     margin-right: 100px; /* Espaçamento entre os itens da nav bar */
 }
@@ -32,7 +38,7 @@
     text-align: center;
     color: white;
     position: relative;
-    margin: 120px auto 0;
+    margin: 160px auto 0;
 }
 
 .form-container h2 {
