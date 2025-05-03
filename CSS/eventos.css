@@ -151,6 +151,21 @@ section {
     color: rgb(205, 205, 205);
 }
 
+.perfil-photo {
+    width: 40px; /* Ajustando o tamanho da foto */
+    height: 40px;
+    border-radius: 50%; /* Deixando a borda circular */
+    border: 2px solid white; /* Adicionando a borda */
+    object-fit: cover; 
+    margin: 0 auto; /* Centralizando a imagem */
+    display: block; /* Para garantir que a imagem seja exibida como um bloco */
+}
+
+.nav-item.text-center span {
+    font-size: 14px; /* Ajustando o tamanho da fonte */
+    color: white; /* Cor do texto */
+    margin-top: 5px; /* Espaçamento entre o nome e a imagem */
+}
 /* estilização do rodapé */
 .footer {
     color: white;
