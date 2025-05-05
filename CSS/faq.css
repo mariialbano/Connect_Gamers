@@ -1,17 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import 'bootstrap/dist/css/bootstrap.min.css'; /* Importando o Bootstrap */
 
+/*Configurações do menu*/
 * {
+    font-family: Barlow, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Barlow, sans-serif;
 }
 
-/* Espaçamento entre os itens da navabar */
-.navbar-nav .nav-item {
-    margin-right: 100px;
+body {
+    overflow-x: hidden;
 }
 
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1050;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #333;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1049;
+}
+
+.hamburger {
+    cursor: pointer;
+    padding-left: 80px;
+}
+
+.me-2 {
+    padding-right: 80px;
+}
+
+.logo {
+    padding-left: 50px;
+    width: 190px;
+}
+
+
+/*Conteúdo principal*/
 section {
     min-height: 100vh;
     padding: 100px;
@@ -98,14 +151,9 @@ textarea {
     display: block; /* Para garantir que a imagem seja exibida como um bloco */
 }
 
-.nav-item.text-center span {
-    font-size: 14px; /* Ajustando o tamanho da fonte */
-    color: white; /* Cor do texto */
-    margin-top: 5px; /* Espaçamento entre o nome e a imagem */
-}
-
 /* estilização do rodapé */
 .footer {
+    background-color: #1a1a1a;
     color: white;
     text-align: center;
     padding: 15px 10px;

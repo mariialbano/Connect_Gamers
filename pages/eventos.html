@@ -12,33 +12,41 @@
 </head>
 
 <body>
-    <!-- Navbar Bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top p-0">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <img src="../assets/IMAGENS/Connect Gamers logo OFICIAL.jpg" alt="logo" class="logo" width="150">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Página Inicial</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../pages/pesquisa.html">Pesquisa e Dados</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="../pages/eventos.html">Jogos e Eventos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../pages/cadastro.html">Cadastro</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../pages/FAQ.html">FAQ</a></li>
-                                     <!-- Profile Photo -->
-                 <li class="nav-item text-center">
-                    <a class="nav-link" href="../pages/perfil.html">
-                        <img src="./assets/IMAGENS/perfil.png" alt="Perfil" class="perfil-photo">
-                        <span class="d-block">Perfil</span>
-                    </a>
-                 </li>
-                </ul>
+    
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <a href="../index.html">Home</a>
+        <a href="../pages/eventos.html">Jogos e Eventos</a>
+        <a href="../pages/cadastro.html">Inscreva-se</a>
+        <a href="../pages/rankings.html">Rankings</a>
+        <a href="../pages/FAQ.html">FAQ</a>
+        <a href="../pages/pesquisa.html">Saiba mais</a>
+        <a href="../pages/pesquisa.html">Configurações</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-black fixed-top p-2">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Esquerda: botão de menu + logo -->
+            <div class="d-flex align-items-center">
+                <div class="hamburger me-3" onclick="openSidebar()">
+                    <img src="../assets/IMAGENS/lista.png" alt="Menu" style="width: 40px;">
+                </div>
+                <a class="navbar-brand m-0 p-0" href="../index.html">
+                    <img src="../assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" alt="logo" class="logo">
+                </a>
             </div>
+
+            <!-- Direita: ícone de perfil -->
+            <a href="../pages/perfil.html" class="me-2">
+                <img src="../assets/IMAGENS/perfil.png" alt="Perfil" style="width: 40px;">
+            </a>
         </div>
     </nav>
+
     <!-- container com as imagens dos jogos -->
     <section class="container-fluid mt-5 pt-5 bg-dark pagina-inteira"> 
         <div class="container-pagina-jogos">
@@ -55,10 +63,22 @@
     </section>
 
     <!-- rodapé da pagina -->
-    <footer class=" footer bg-dark text-white text-center">
+    <footer class=" footer text-white text-center">
         <p>© 2025 Connect Gamers. Todos os direitos reservados.</p>
         <p>Desenvolvido por: Ana Gonçalves, Jessica Brito, Mariana Albano, Neemias Silva, Vinícius Gonzales.</p>
     </footer>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").style.width = "250px";
+            document.getElementById("overlay").style.display = "block";
+        }
+    
+        function closeSidebar() {
+            document.getElementById("sidebar").style.width = "0";
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
 
     <!-- importando o javascript -->
     <script src="../JS/eventos.js"></script>    
