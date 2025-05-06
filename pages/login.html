@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<meta charset="UTF-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connect Gamers</title>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="../CSS/login.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+ 
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <a href="../index.html">Home</a>
+    <a href="../pages/eventos.html">Jogos e Eventos</a>
+    <a href="../pages/cadastro.html">Inscreva-se</a>
+    <a href="../pages/rankings.html">Rankings</a>
+    <a href="../pages/FAQ.html">FAQ</a>
+    <a href="../pages/pesquisa.html">Saiba mais</a>
+    <a href="../pages/pesquisa.html">Configurações</a>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-black fixed-top p-2">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <!-- Esquerda: botão de menu + logo -->
+        <div class="d-flex align-items-center">
+            <div class="hamburger me-3" onclick="openSidebar()">
+                <img src="../assets/IMAGENS/lista.png" alt="Menu" style="width: 40px;">
+            </div>
+            <a class="navbar-brand m-0 p-0" href="../index.html">
+                <img src="../assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" alt="logo" class="logo">
+            </a>
+        </div>
+    </nav>
+
+        <!-- Direita: ícone de perfil -->
+        <a href="../pages/perfil.html" class="me-2">
+            <img src="../assets/IMAGENS/perfil.png" alt="Perfil" style="width: 40px;">
+        </a>
+<section class="container-fluid mt-5 pt-5 bg-dark">
+    <div class="login-form-container">
+        <form class="login-form" action="../pages/perfil.html" method="GET">
+            <h2 class="text-center">Login</h2>
+            <div class="mb-3">
+                <label for="usuario" class="form-label">RM do aluno</label>
+                <input type="usuario" class="form-control" id="usuario" placeholder="Digite seu RM" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required>
+            </div>
+            <button type="submit" class="btn-primary">Entrar</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer bg-dark text-white text-center">
+    <p>© 2025 Connect Gamers. Todos os direitos reservados.</p>
+    <p>Desenvolvido por: Ana Gonçalves, Jessica Brito, Mariana Albano, Neemias Silva, Vinícius Gonzales.</p>
+</footer>
+
+<script>
+    function openSidebar() {
+        document.getElementById("sidebar").style.width = "250px";
+        document.getElementById("overlay").style.display = "block";
+    }
+
+    function closeSidebar() {
+        document.getElementById("sidebar").style.width = "0";
+        document.getElementById("overlay").style.display = "none";
+    }
+</script>
+ <!-- Scripts -->
+ <script src="../assets/JS/login.js"></script>
+<!-- Bootstrap Bundle com Popper para o menu ficar responsivo -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
