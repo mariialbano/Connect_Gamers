@@ -1,0 +1,190 @@
+:root {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --primary-color: rgb(253, 77, 121);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center; 
+}
+
+/* Cabeçalho com foto destacada */
+.profile-header {
+    margin-bottom: 3rem;
+}
+
+.profile-picture {
+    width: 180px; 
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    margin: 0 auto 1.5rem; 
+    display: block;
+    box-shadow: 0 0 0 8px rgba(253, 77, 121, 0.2); 
+}
+
+.profile-info h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-info p {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.profile-rank {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+
+.profile-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.profile-section {
+    margin-bottom: 3rem;
+}
+
+.profile-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 0.5rem;
+}
+
+.events-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.event-item {
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    text-align: left; 
+}
+
+.event-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.event-item p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.password-section {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+}
+
+.password-form {
+    margin-top: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-password {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    width: 100%;
+}
+
+.btn-password:hover {
+    background-color: rgba(253, 77, 121, 0.9);
+    transform: translateY(-2px);
+}
+
+.profile-picture-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.edit-picture-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.edit-picture-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.edit-picture-btn i {
+    font-size: 0.7rem;
+}
