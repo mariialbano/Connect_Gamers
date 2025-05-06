@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import '../CSS/bootstrap.min.css'; /* Importando o Bootstrap */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Barlow, sans-serif;
+}
+
+/*Configurações do menu*/
+* {
+    font-family: Barlow, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1050;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #333;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1049;
+}
+
+.hamburger {
+    cursor: pointer;
+    padding-left: 80px;
+}
+
+.me-2 {
+    padding-right: 80px;
+}
+
+.logo {
+    padding-left: 50px;
+    width: 190px;
+}
+
+
+/*Conteúdo principal*/
+section {
+    min-height: 100vh;
+    padding-top: 100px;
+    align-items: center;
+}
+
+
+section {
+    flex: 1; /* Permite que a seção ocupe o espaço restante da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: black;
+}
+
+header {
+    position: fixed; /*Mantém o header fixo no topo*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000; /* Mantém o header sobre os outros elementos */ 
+}
+
+header .logo {
+    position: relative;
+    max-width: 150px;
+}
+
+header .navegaçao ul {
+    position: relative;
+    display: flex;
+}
+
+header .navegaçao li {
+    list-style: none;
+}
+
+header .navegaçao li a {
+    color: rgb(253, 77, 121);
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 19px;
+    margin-left: 100px;
+}
+
+ /* Centralizando o form */
+.login-form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: ghostwhite;
+    border-radius: 10%; /* borda circular */
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Estilizando o título do form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form .form-control {
+    border-radius: 20px; /* Borda circular */
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: rgb(253, 77, 121);
+    border-color: rgb(253, 77, 121);
+    border-radius: 50px; /* Borda circular */
+    padding: 10px 20px; /* Ajustando o tamanho do botão */
+    color: white; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: rgb(220, 60, 100); 
+    border-color: rgb(220, 60, 100);
+}
+
+.btn-primary:active {
+    background-color: rgb(220, 60, 100);
+    border-color: rgb(253, 77, 121);
+}
+
+.btn-primary:focus {
+    background-color: rgb(220, 60, 100);
+    border-color: rgb(220, 60, 100);
+    box-shadow: 0 0 0 0.2rem rgba(253, 77, 121, 0.5); 
+}
+
+
+.perfil-photo {
+    width: 40px; /* Ajustando o tamanho da foto */
+    height: 40px;
+    border-radius: 50%; /* Deixando a borda circular */
+    border: 2px solid white; /* Adicionando a borda */
+    object-fit: cover; 
+    margin: 0 auto; /* Centralizando a imagem */
+    display: block; /* Para garantir que a imagem seja exibida como um bloco */
+}
+
+.nav-item.text-center span {
+    font-size: 14px; /* Ajustando o tamanho da fonte */
+    color: white; /* Cor do texto */
+    margin-top: 5px; /* Espaçamento entre o nome e a imagem */
+}
+
+/* estilização do rodapé */
+.footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 14px;
+    border-top: 2px solid rgb(253, 77, 121);
+    box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+
+
+/* @media para trazer responsividade */
+@media (max-width: 1200px) {
+    header {
+        padding: 40px 50px;
+    }
+
+    header .navegaçao li a {
+        margin-left: 50px;
+    }
+
+    .container .texto {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 992px) {
+    section {
+        padding: 80px 50px;
+    }
+
+    header {
+        padding: 30px 50px;
+    }
+
+    header .navegaçao li a {
+        margin-left: 30px;
+        font-size: 17px;
+    }
+
+    .container .texto {
+        max-width: 400px;
+    }
+
+    .container .texto h2 {
+        font-size: 0.9em;
+    }
+
+    .container .texto h2 span {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 30px;
+    }
+
+    header {
+        padding: 20px 30px;
+    }
+
+    header .navegaçao li a {
+        margin-left: 20px;
+        font-size: 16px;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container .texto {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .container .texto h2 {
+        font-size: 0.8em;
+    }
+
+    .container .texto h2 span {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 40px 20px;
+    }
+
+    header {
+        padding: 15px 20px;
+    }
+
+    header .logo {
+        max-width: 100px;
+    }
+
+    header .navegaçao li a {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+
+    .container .texto h2 {
+        font-size: 0.7em;
+    }
+
+    .container .texto h2 span {
+        font-size: 1.1em;
+    }
+}
+
