@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Conect Gamers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/perfil.css">
+</head>
+<body>
+    <div class="profile-container">
+        <!-- Cabeçalho do Perfil -->
+        <div class="profile-header">
+            <div class="profile-picture-container">
+                <img src="https://via.placeholder.com/150" alt="Foto do perfil" class="profile-picture" id="profilePicture">
+                <label for="profilePictureInput" class="edit-picture-btn">
+                    <i class="fas fa-camera"></i> Alterar
+                </label>
+                <input type="file" id="profilePictureInput" accept="image/*" style="display: none;">
+            </div>
+            
+            <div class="profile-info">
+                <h1>Nome do Usuário</h1>
+                <p>user@conectgamers.com</p>
+                <div class="profile-rank">
+                    <span>Ranking: Ouro</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="profile-content">
+            <!-- Seção de Eventos -->
+            <section class="profile-section">
+                <h2><i class="fas fa-calendar-alt"></i> Meus Eventos</h2>
+                <div class="events-list">
+                    <div class="event-item">
+                        <h3>Torneio de Valorant</h3>
+                        <p>25/05/2025 - Online</p>
+                    </div>
+                    <div class="event-item">
+                        <h3>Campeonato de League of Legends</h3>
+                        <p>02/06/2025 - Online</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção de Alteração de Senha -->
+            <section class="password-section">
+                <h2><i class="fas fa-lock"></i> Alterar Senha</h2>
+                <form class="password-form">
+                    <div class="form-group">
+                        <label for="current-password">Senha Atual</label>
+                        <input type="password" id="current-password" placeholder="Digite sua senha atual">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">Nova Senha</label>
+                        <input type="password" id="new-password" placeholder="Digite a nova senha">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmar Nova Senha</label>
+                        <input type="password" id="confirm-password" placeholder="Confirme a nova senha">
+                    </div>
+                    <button type="submit" class="btn-password">Atualizar Senha</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <script src="../pages/perfil.js"></script>
+</body>
+</html>
