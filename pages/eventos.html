@@ -19,13 +19,25 @@
     <!-- Sidebar -->
     <div id="sidebar" class="sidebar">
         <a href="../index.html">Home</a>
-        <a href="../pages/eventos.html">Jogos e Eventos</a>
-        <a href="../pages/cadastro.html">Inscreva-se</a>
-        <a href="../pages/rankings.html">Rankings</a>
-        <a href="../pages/FAQ.html">FAQ</a>
-        <a href="../pages/pesquisa.html">Saiba mais</a>
-        <a href="../pages/pesquisa.html">Configurações</a>
+        <a href="eventos.html">Jogos e Eventos</a>
+        <a href="cadastro.html">Inscreva-se</a>
+        <a href="rankings.html">Rankings</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="pesquisa.html">Saiba mais</a>
+
+        <!-- Configurações com submenu -->
+        <div class="configuracoes">
+            <a href="#" onclick="toggleConfig()">Configurações</a>
+            <div id="submenu-config" class="submenu">
+                <label class="switch-label">Tema Escuro</label>
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
     </div>
+
 
     <!-- Navbar -->
     <nav class="navbar navbar-dark bg-black fixed-top p-2">
@@ -36,17 +48,16 @@
                     <img src="../assets/IMAGENS/lista.png" alt="Menu" style="width: 40px;">
                 </div>
                 <a class="navbar-brand m-0 p-0" href="../index.html">
-                    <img src="../assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" alt="logo" class="logo">
+                    <img src="../assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" alt="logo" class="logo" id="siteLogo">
                 </a>
             </div>
 
             <!-- Direita: ícone de perfil -->
             <a href="../pages/perfil.html" class="me-2">
-                <img src="../assets/IMAGENS/perfil.png" alt="Perfil" style="width: 40px;">
+                <img src="../assets/IMAGENS/perfil.png" alt="Perfil" style="width: 40px;" id="perfilIcon">
             </a>
         </div>
     </nav>
-
     <!-- container com as imagens dos jogos -->
     <section class="container-fluid mt-5 pt-5 bg-dark pagina-inteira"> 
         <div class="container-pagina-jogos">
@@ -78,6 +89,70 @@
             document.getElementById("sidebar").style.width = "0";
             document.getElementById("overlay").style.display = "none";
         }
+    </script>
+
+    <script>
+        // Mostrar/ocultar submenu de configurações
+                function toggleConfig() {
+                const submenu = document.getElementById("submenu-config");
+                submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+            }
+
+            // Aplicar tema salvo no carregamento da página
+            window.onload = function () {
+                const savedTheme = localStorage.getItem("siteTheme") || "dark";
+                document.body.classList.add(savedTheme + "-theme");
+
+                const isDark = savedTheme === "dark";
+                const toggle = document.getElementById("themeToggle");
+                const label = document.querySelector(".switch-label");
+                const logo = document.getElementById("siteLogo");
+                const perfilIcon = document.getElementById("perfilIcon"); // Nova linha
+
+                if (toggle) toggle.checked = isDark;
+                if (label) label.textContent = isDark ? "Tema Escuro" : "Tema Claro";
+
+                if (logo) {
+                    logo.src = isDark ? "../assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" : "../assets/IMAGENS/logo - tema claro.png";
+                }
+
+                if (perfilIcon) { // Nova condição
+                    perfilIcon.src = isDark ? "../assets/IMAGENS/perfil.png" : "../assets/IMAGENS/perfil_preto.png"; // Assumindo que você tem uma imagem 'perfil-claro.png'
+                }
+            };
+
+            // Troca o tema, atualiza texto, logo e salva no localStorage
+            document.addEventListener("DOMContentLoaded", function () {
+                const toggle = document.getElementById("themeToggle");
+                const label = document.querySelector(".switch-label");
+                const logo = document.getElementById("siteLogo");
+                const perfilIcon = document.getElementById("perfilIcon"); // Nova linha
+
+                if (toggle) {
+                    toggle.addEventListener("change", function () {
+                        const isDark = toggle.checked;
+                        const newTheme = isDark ? "dark" : "light";
+
+                        document.body.classList.remove("light-theme", "dark-theme");
+                        document.body.classList.add(newTheme + "-theme");
+
+                        if (label) {
+                            label.textContent = isDark ? "Tema Escuro" : "Tema Claro";
+                            label.style.color = isDark ? "#fff" : "#000"; // Define a cor do texto da label
+                        }
+
+                        if (logo) {
+                            logo.src = isDark ? "../assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" : "../assets/IMAGENS/logo - tema claro.png";
+                        }
+
+                        if (perfilIcon) { // Nova condição
+                            perfilIcon.src = isDark ? "../assets/IMAGENS/perfil.png" : "../assets/IMAGENS/perfil_preto.png"; // Assumindo que você tem uma imagem 'perfil-claro.png'
+                        }
+
+                        localStorage.setItem("siteTheme", newTheme);
+                    });
+                }
+            });
     </script>
 
     <!-- importando o javascript -->
