@@ -63,6 +63,122 @@ body {
     width: 190px;
 }
 
+/* Submenu de Configurações */
+.configuracoes .submenu {
+    display: none;
+    padding: 10px 15px;
+}
+
+.switch-label {
+    color: white;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* Estilo do switch tipo iPhone */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+
+/* Temas */
+/* Tema Claro */
+body.light-theme {
+    background-color: #ffffff; /* já é branco suave */
+    color: #212529;
+}
+
+body.light-theme section.bg-dark {
+    background-color: #e9ecef !important;
+}
+
+body.light-theme .navbar,
+body.light-theme .sidebar {
+    background-color: #f8f9fa !important; /* branco puro para menu superior e lateral */
+}
+
+body.light-theme .sidebar a,
+body.light-theme .configuracoes a {
+    color: #000;
+}
+
+body.light-theme .texto p {
+    color: #000;
+}
+
+body.light-theme footer {
+    background-color: #f8f9fa !important;
+    color: #000 !important;
+    border-top: 2px solid #fd4d79 !important;
+}
+
+/* Tema Claro - Hover nos links da Sidebar */
+body.light-theme .sidebar a:hover {
+    background-color: #e0e0e0; /* Um tom de cinza bem claro */
+    color: #000; /* Mantém a cor do texto preta */
+}
+
+body.light-theme .configuracoes a:hover {
+    background-color: #e0e0e0; /* Aplica o mesmo efeito ao link "Configurações" se desejar */
+    color: #000;
+}
+
+body.light-theme .submenu a:hover {
+    background-color: #e0e0e0; /* Aplica o mesmo efeito aos links dentro do submenu, se houver */
+    color: #000;
+}
+
+body.light-theme .submenu {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+/*Tema escuro*/
+body.dark-theme {
+    background-color: #000;
+    color: #fff;
+}
+
 
 /*Conteúdo principal*/
 section {

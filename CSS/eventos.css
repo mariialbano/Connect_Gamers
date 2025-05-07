@@ -177,25 +177,12 @@ body.light-theme .submenu a:hover {
     color: #000;
 }
 
-/* Botão de alternar tema no modo claro */
-body.light-theme #toggle-theme {
-    border-color: #000;
-    color: #000;
-}
-
-/* Estilo padrão (modo escuro) */
-#toggle-theme i {
-    background-color: transparent;
-    color: #f8f9fa; /* ícone claro */
-    border: none;
-}
-
 body.light-theme .submenu {
     background-color: #f0f0f0;
     border: 1px solid #ccc;
 }
 
-
+/*Tema escuro*/
 body.dark-theme {
     background-color: #000;
     color: #fff;
