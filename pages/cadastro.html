@@ -33,9 +33,15 @@
                     <span class="slider round"></span>
                 </label>
             </div>
+            <div id ="submenu-vlibras" class="submenu">
+                <label class="switch-label"> Libras</label>
+                <label class="switch">
+                    <input type="checkbox" id="vibras-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
         </div>
     </div>
-
 
     <!-- Navbar -->
     <nav class="navbar navbar-dark bg-black fixed-top p-2">
@@ -132,11 +138,13 @@
     </script>
 
     <script>
-        // Mostrar/ocultar submenu de configurações
-                function toggleConfig() {
-            const submenu = document.getElementById("submenu-config");
-            submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-        }
+            function toggleConfig() {
+                const submenu = document.getElementById("submenu-config");
+                const submenuLibras = document.getElementById("submenu-vlibras");
+                
+                submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                submenuLibras.style.display = submenuLibras.style.display === "block" ? "none" : "block";
+            }
 
         // Aplicar tema salvo no carregamento da página
         window.onload = function () {
@@ -195,11 +203,31 @@
         });
     </script>
 
+        <!-- botão vlibras -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const librasToggle = document.getElementById("vibras-toggle");
+            const vlibras = document.getElementById("vlibras");
+
+            const librasAtivo = localStorage.getItem("vlibrasAtivo") === "true";
+                vlibras.style.display = librasAtivo ? "block" : "none";
+                librasToggle.checked = librasAtivo;
+
+            librasToggle.addEventListener("change", function () {
+                const ativo = this.checked;
+                vlibras.style.display = ativo ? "block" : "none";
+                localStorage.setItem("vlibrasAtivo", ativo);
+            });
+        });
+    </script>
+
     <!-- VLibras widget -->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
+    <div id="vlibras">
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
         </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
