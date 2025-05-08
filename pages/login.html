@@ -12,19 +12,39 @@
 </head>
 <body>
 
-<!-- Overlay -->
-<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
- 
-<!-- Sidebar -->
-<div id="sidebar" class="sidebar">
-    <a href="../index.html">Home</a>
-    <a href="../pages/eventos.html">Jogos e Eventos</a>
-    <a href="../pages/cadastro.html">Inscreva-se</a>
-    <a href="../pages/rankings.html">Rankings</a>
-    <a href="../pages/FAQ.html">FAQ</a>
-    <a href="../pages/pesquisa.html">Saiba mais</a>
-    <a href="../pages/pesquisa.html">Configurações</a>
-</div>
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <a href="../index.html">Home</a>
+        <a href="../pages/eventos.html">Jogos e Eventos</a>
+        <a href="../pages/cadastro.html">Inscreva-se</a>
+        <a href="../pages/rankings.html">Rankings</a>
+        <a href="../pages/FAQ.html">FAQ</a>
+        <a href="../pages/pesquisa.html">Saiba mais</a>
+        <a href="../pages/pesquisa.html">Configurações</a>
+
+            <!-- Configurações com submenu -->
+            <div class="configuracoes">
+                <a href="#" onclick="toggleConfig()">Configurações</a>
+                <div id="submenu-config" class="submenu">
+                    <label class="switch-label">Tema Escuro</label>
+                    <label class="switch">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div id ="submenu-vlibras" class="submenu">
+                    <label class="switch-label"> Libras</label>
+                    <label class="switch">
+                        <input type="checkbox" id="vibras-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <!-- Navbar -->
 <nav class="navbar navbar-dark bg-black fixed-top p-2">
@@ -78,19 +98,104 @@
         document.getElementById("overlay").style.display = "none";
     }
 </script>
+~
+    <script>
+            function toggleConfig() {
+                const submenu = document.getElementById("submenu-config");
+                const submenuLibras = document.getElementById("submenu-vlibras");
+                
+                submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                submenuLibras.style.display = submenuLibras.style.display === "block" ? "none" : "block";
+            }
+
+            // Aplicar tema salvo no carregamento da página
+            window.onload = function () {
+                const savedTheme = localStorage.getItem("siteTheme") || "dark";
+                document.body.classList.add(savedTheme + "-theme");
+
+                const isDark = savedTheme === "dark";
+                const toggle = document.getElementById("themeToggle");
+                const label = document.querySelector(".switch-label");
+                const logo = document.getElementById("siteLogo");
+                const perfilIcon = document.getElementById("perfilIcon"); // Nova linha
+
+                if (toggle) toggle.checked = isDark;
+                if (label) label.textContent = isDark ? "Tema Escuro" : "Tema Claro";
+
+                if (logo) {
+                    logo.src = isDark ? "../assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" : "../assets/IMAGENS/logo - tema claro.png";
+                }
+
+                if (perfilIcon) { // Nova condição
+                    perfilIcon.src = isDark ? "../assets/IMAGENS/perfil.png" : "../assets/IMAGENS/perfil_preto.png"; // Assumindo que você tem uma imagem 'perfil-claro.png'
+                }
+            };
+
+            // Troca o tema, atualiza texto, logo e salva no localStorage
+            document.addEventListener("DOMContentLoaded", function () {
+                const toggle = document.getElementById("themeToggle");
+                const label = document.querySelector(".switch-label");
+                const logo = document.getElementById("siteLogo");
+                const perfilIcon = document.getElementById("perfilIcon"); // Nova linha
+
+                if (toggle) {
+                    toggle.addEventListener("change", function () {
+                        const isDark = toggle.checked;
+                        const newTheme = isDark ? "dark" : "light";
+
+                        document.body.classList.remove("light-theme", "dark-theme");
+                        document.body.classList.add(newTheme + "-theme");
+
+                        if (label) {
+                            label.textContent = isDark ? "Tema Escuro" : "Tema Claro";
+                            label.style.color = isDark ? "#fff" : "#000"; // Define a cor do texto da label
+                        }
+
+                        if (logo) {
+                            logo.src = isDark ? "../assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" : "../assets/IMAGENS/logo - tema claro.png";
+                        }
+
+                        if (perfilIcon) { // Nova condição
+                            perfilIcon.src = isDark ? "../assets/IMAGENS/perfil.png" : "../assets/IMAGENS/perfil_preto.png"; // Assumindo que você tem uma imagem 'perfil-claro.png'
+                        }
+
+                        localStorage.setItem("siteTheme", newTheme);
+                    });
+                }
+            });
+    </script>
+
+        <!-- botão vlibras -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const librasToggle = document.getElementById("vibras-toggle");
+            const vlibras = document.getElementById("vlibras");
+
+            const librasAtivo = localStorage.getItem("vlibrasAtivo") === "true";
+                vlibras.style.display = librasAtivo ? "block" : "none";
+                librasToggle.checked = librasAtivo;
+
+            librasToggle.addEventListener("change", function () {
+                const ativo = this.checked;
+                vlibras.style.display = ativo ? "block" : "none";
+                localStorage.setItem("vlibrasAtivo", ativo);
+            });
+        });
+    </script>
 
     <!-- VLibras widget -->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
+    <div id="vlibras">
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
         </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-
 <!-- Scripts -->
 <script src="../assets/JS/login.js"></script>
 <!-- Bootstrap Bundle com Popper para o menu ficar responsivo -->
