@@ -44,9 +44,6 @@
         </div>
     </nav>
 
-
-    
-
     <!-- Footer -->
     <footer class="footer text-white text-center">
         <p>© 2025 Connect Gamers. Todos os direitos reservados.</p>
@@ -65,11 +62,31 @@
         }
     </script>
 
+        <!-- botão vlibras -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const librasToggle = document.getElementById("vibras-toggle");
+            const vlibras = document.getElementById("vlibras");
+
+            const librasAtivo = localStorage.getItem("vlibrasAtivo") === "true";
+                vlibras.style.display = librasAtivo ? "block" : "none";
+                librasToggle.checked = librasAtivo;
+
+            librasToggle.addEventListener("change", function () {
+                const ativo = this.checked;
+                vlibras.style.display = ativo ? "block" : "none";
+                localStorage.setItem("vlibrasAtivo", ativo);
+            });
+        });
+    </script>
+
     <!-- VLibras widget -->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
+    <div id="vlibras">
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
         </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
