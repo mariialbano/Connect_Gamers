@@ -115,27 +115,35 @@
                 submenuLibras.style.display = submenuLibras.style.display === "block" ? "none" : "block";
             }
 
-            // Aplicar tema salvo no carregamento da página
-            window.onload = function () {
-                const savedTheme = localStorage.getItem("siteTheme") || "dark";
-                document.body.classList.add(savedTheme + "-theme");
+            // Aplicar tema salvo no carregamento da página
+            window.onload = function () {
+            const savedTheme = localStorage.getItem("siteTheme") || "dark";
+            document.body.classList.add(savedTheme + "-theme");
 
-                const isDark = savedTheme === "dark";
-                const toggle = document.getElementById("themeToggle");
-                const label = document.querySelector(".switch-label");
-                const logo = document.getElementById("siteLogo");
-                const perfilIcon = document.getElementById("perfilIcon"); // Nova linha
+            const isDark = savedTheme === "dark";
+            const toggle = document.getElementById("themeToggle");
+            const label = document.querySelector(".switch-label");
+            const librasLabel = document.querySelector('#submenu-vlibras .switch-label');
+            const logo = document.getElementById("siteLogo");
+            const perfilIcon = document.getElementById("perfilIcon");
 
-                if (toggle) toggle.checked = isDark;
-                if (label) label.textContent = isDark ? "Tema Escuro" : "Tema Claro";
+            if (toggle) toggle.checked = isDark;
+                if (label) {
+                    label.textContent = isDark ? "Tema Escuro" : "Tema Claro";
+                    label.style.color = isDark ? "#fff" : "#000"; // <== define cor da label tema
+                }
 
-                if (logo) {
-                    logo.src = isDark ? "../assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" : "../assets/IMAGENS/logo - tema claro.png";
-                }
+                if (librasLabel) {
+                    librasLabel.style.color = isDark ? "#fff" : "#000"; // <== define cor da label libras
+                }
 
-                if (perfilIcon) { // Nova condição
-                    perfilIcon.src = isDark ? "../assets/IMAGENS/perfil.png" : "../assets/IMAGENS/perfil_preto.png"; // Assumindo que você tem uma imagem 'perfil-claro.png'
-                }
+                if (logo) {
+                    logo.src = isDark ? "../assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" : "../assets/IMAGENS/logo - tema claro.png";
+                }
+
+                if (perfilIcon) {
+                    perfilIcon.src = isDark ? "../assets/IMAGENS/perfil.png" : "../assets/IMAGENS/perfil_preto.png";
+                }
             };
 
            // Troca o tema, atualiza texto, logo e salva no localStorage
