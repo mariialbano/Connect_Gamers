@@ -193,7 +193,7 @@ section {
 
 .login-form-container {
     position: relative; /* ou 'absolute' se dentro de um container com 'relative' */
-    margin-top: 80px; /* ajusta a distância do topo */
+    margin-top: 90px; /* ajusta a distância do topo */
     width: 350px;
     background-color: ghostwhite;
     border-radius: 10%;

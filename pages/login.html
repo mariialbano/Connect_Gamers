@@ -60,7 +60,7 @@
             </div>
 
             <!-- Direita: ícone de perfil -->
-            <a href="perfil.html" class="me-2">
+            <a href="login.html" class="me-2">
                 <img src="../assets/IMAGENS/perfil.png" alt="Perfil" style="width: 40px;" id="perfilIcon">
             </a>
         </div>
@@ -98,7 +98,7 @@
                                 <small>Concordo em compartilhar meus dados</small>
                             </label>
                         </div>
-                        <button type="submit" class="btn-primary">Entrar</button>
+                        <button type="submit" class="btn-primary" id="btnEntrar">Entrar</button>
                     </form>
                 </div>
     </section>
@@ -120,6 +120,11 @@
             document.getElementById("sidebar").style.width = "0";
             document.getElementById("overlay").style.display = "none";
         }
+
+        document.getElementById('btnEntrar').addEventListener('click', function (e) {
+            e.preventDefault(); // evita recarregar a página, se estiver em um form
+            window.location.href = 'perfil.html'; // redireciona para a página de perfil
+        });
 
     </script>
 
