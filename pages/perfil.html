@@ -16,7 +16,7 @@
     <div id="sidebar" class="sidebar">
         <a href="../index.html">Home</a>
         <a href="eventos.html">Jogos e Eventos</a>
-        <a href="../pages/login.html">Crie sua conta</a>
+        <a href="login.html">Crie sua conta</a>
         <a href="cadastro.html">Inscreva-se</a>
         <a href="rankings.html">Rankings</a>
         <a href="FAQ.html">FAQ</a>
@@ -198,11 +198,11 @@
                         }
 
                         if (logo) {
-                            logo.src = isDark ? "./assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" : "./assets/IMAGENS/logo - tema claro.png";
+                            logo.src = isDark ? "../assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" : "../assets/IMAGENS/logo - tema claro.png";
                         }
 
                         if (perfilIcon) { // Nova condição
-                            perfilIcon.src = isDark ? "./assets/IMAGENS/perfil.png" : "./assets/IMAGENS/perfil_preto.png"; // Assumindo que você tem uma imagem 'perfil-claro.png'
+                            perfilIcon.src = isDark ? "../assets/IMAGENS/perfil.png" : "../assets/IMAGENS/perfil_preto.png"; // Assumindo que você tem uma imagem 'perfil-claro.png'
                         }
 
                         localStorage.setItem("siteTheme", newTheme);

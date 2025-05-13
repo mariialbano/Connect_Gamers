@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Gamers</title>
 
-<meta charset="UTF-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Connect Gamers</title>
-
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="../CSS/login.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
+
 <body>
 
     <!-- Overlay -->
@@ -18,12 +18,12 @@
     <!-- Sidebar -->
     <div id="sidebar" class="sidebar">
         <a href="../index.html">Home</a>
-        <a href="../pages/eventos.html">Jogos e Eventos</a>
-        <a href="../pages/login.html">Crie sua conta</a>
-        <a href="../pages/cadastro.html">Inscreva-se</a>
-        <a href="../pages/rankings.html">Rankings</a>
-        <a href="../pages/FAQ.html">FAQ</a>
-        <a href="../pages/pesquisa.html">Saiba mais</a>
+        <a href="eventos.html">Jogos e Eventos</a>
+        <a href="login.html">Crie sua conta</a>
+        <a href="cadastro.html">Inscreva-se</a>
+        <a href="rankings.html">Rankings</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="pesquisa.html">Saiba mais</a>
 
             <!-- Configurações com submenu -->
             <div class="configuracoes">
@@ -46,78 +46,83 @@
         </div>
     </div>
 
-<!-- Navbar -->
-<nav class="navbar navbar-dark bg-black fixed-top p-2">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-        <!-- Esquerda: botão de menu + logo -->
-        <div class="d-flex align-items-center">
-            <div class="hamburger me-3" onclick="openSidebar()">
-                <img src="../assets/IMAGENS/lista.png" alt="Menu" style="width: 40px;">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-black fixed-top p-2">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Esquerda: botão de menu + logo -->
+            <div class="d-flex align-items-center">
+                <div class="hamburger me-3" onclick="openSidebar()">
+                    <img src="../assets/IMAGENS/lista.png" alt="Menu" style="width: 40px;">
+                </div>
+                <a class="navbar-brand m-0 p-0" href="../index.html">
+                    <img src="../assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" alt="logo" class="logo" id="siteLogo">
+                </a>
             </div>
-            <a class="navbar-brand m-0 p-0" href="../index.html">
-                <img src="../assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" alt="logo" class="logo">
+
+            <!-- Direita: ícone de perfil -->
+            <a href="perfil.html" class="me-2">
+                <img src="../assets/IMAGENS/perfil.png" alt="Perfil" style="width: 40px;" id="perfilIcon">
             </a>
         </div>
     </nav>
 
-        <!-- Direita: ícone de perfil -->
-        <a href="../pages/perfil.html" class="me-2">
-            <img src="../assets/IMAGENS/perfil.png" alt="Perfil" style="width: 40px;">
-        </a>
-<section class="container-fluid mt-5 pt-5 bg-dark">
-    <div class="login-form-container">
-        <form class="login-form" action="../pages/perfil.html" method="GET">
-            <h2 class="text-center">Login</h2>
-            <div class="mb-3">
-                <label for="usuario" class="form-label">RM do aluno</label>
-                <input type="usuario" class="form-control" id="usuario" placeholder="Digite seu RM" required>
-            </div>
-             <!-- Usuário e senha com requisitos  -->
-            <div class="mb-3">
-                <label for="password" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="password" placeholder="Digite sua senha" 
-                pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" 
-                title="A senha deve ter pelo menos 8 caracteres, incluindo letras, números e um símbolo"
-                       required>
-                <small class="form-text text-muted">
-                        A senha deve ter pelo menos 8 caracteres, incluindo letras, números e um símbolo 
-                    </small>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input custom-checkbox" id="securityAwareness" required>
-                        <label class="form-check-label" for="securityAwareness">
-                            <small>Estou ciente das práticas de segurança do site</small>
-                        </label>
-                    </div>
-                    <!-- Adicionando a checkbox -->
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input custom-checkbox" id="dataSharing" required>
-                        <label class="form-check-label" for="dataSharing">
-                            <small>Concordo em compartilhar meus dados</small>
-                        </label>
-                    </div>
-                    <button type="submit" class="btn-primary">Entrar</button>
-                </form>
-            </div>
-</section>
+            
+    <section class="container-fluid mt-5 pt-5 bg-dark">
+        <div class="login-form-container">
+            <form class="login-form" action="perfil.html" method="GET">
+                <h2 class="text-center">Login</h2>
+                <div class="mb-3">
+                    <label for="usuario" class="form-label">RM do aluno</label>
+                    <input type="usuario" class="form-control" id="usuario" placeholder="Digite seu RM" required>
+                </div>
+                <!-- Usuário e senha com requisitos  -->
+                <div class="mb-3">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="password" placeholder="Digite sua senha" 
+                    pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" 
+                    title="A senha deve ter pelo menos 8 caracteres, incluindo letras, números e um símbolo"
+                        required>
+                    <small class="form-text text-muted">
+                            A senha deve ter pelo menos 8 caracteres, incluindo letras, números e um símbolo 
+                        </small>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input custom-checkbox" id="securityAwareness" required>
+                            <label class="form-check-label" for="securityAwareness">
+                                <small>Estou ciente das práticas de segurança do site</small>
+                            </label>
+                        </div>
+                        <!-- Adicionando a checkbox -->
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input custom-checkbox" id="dataSharing" required>
+                            <label class="form-check-label" for="dataSharing">
+                                <small>Concordo em compartilhar meus dados</small>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-primary">Entrar</button>
+                    </form>
+                </div>
+    </section>
 
-<!-- Footer -->
-<footer class="footer bg-dark text-white text-center">
-    <p>© 2025 Connect Gamers. Todos os direitos reservados.</p>
-    <p>Desenvolvido por: Ana Gonçalves, Jessica Brito, Mariana Albano, Neemias Silva, Vinícius Gonzales.</p>
-</footer>
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white text-center">
+        <p>© 2025 Connect Gamers. Todos os direitos reservados.</p>
+        <p>Desenvolvido por: Ana Gonçalves, Jessica Brito, Mariana Albano, Neemias Silva, Vinícius Gonzales.</p>
+    </footer>
 
-<script>
-    function openSidebar() {
-        document.getElementById("sidebar").style.width = "250px";
-        document.getElementById("overlay").style.display = "block";
-    }
+    <script>
 
-    function closeSidebar() {
-        document.getElementById("sidebar").style.width = "0";
-        document.getElementById("overlay").style.display = "none";
-    }
-</script>
-~
+        function openSidebar() {
+            document.getElementById("sidebar").style.width = "250px";
+            document.getElementById("overlay").style.display = "block";
+        }
+    
+        function closeSidebar() {
+            document.getElementById("sidebar").style.width = "0";
+            document.getElementById("overlay").style.display = "none";
+        }
+
+    </script>
+
     <script>
             function toggleConfig() {
                 const submenu = document.getElementById("submenu-config");
@@ -127,67 +132,68 @@
                 submenuLibras.style.display = submenuLibras.style.display === "block" ? "none" : "block";
             }
 
-        // Aplicar tema salvo no carregamento da página
-        window.onload = function () {
-     const savedTheme = localStorage.getItem("siteTheme") || "dark";
-     document.body.classList.add(savedTheme + "-theme");
+        // Aplicar tema salvo no carregamento da página
+        window.onload = function () {
+            const savedTheme = localStorage.getItem("siteTheme") || "dark";
+            document.body.classList.add(savedTheme + "-theme");
 
-     const isDark = savedTheme === "dark";
-     const toggle = document.getElementById("themeToggle");
-     const label = document.querySelector(".switch-label");
-     const logo = document.getElementById("siteLogo");
-     const perfilIcon = document.getElementById("perfilIcon"); // Nova linha
+            const isDark = savedTheme === "dark";
+            const toggle = document.getElementById("themeToggle");
+            const label = document.querySelector(".switch-label");
+            const logo = document.getElementById("siteLogo");
+            const perfilIcon = document.getElementById("perfilIcon"); // Nova linha
 
-     if (toggle) toggle.checked = isDark;
-     if (label) label.textContent = isDark ? "Tema Escuro" : "Tema Claro";
+            if (toggle) toggle.checked = isDark;
+            if (label) label.textContent = isDark ? "Tema Escuro" : "Tema Claro";
 
-     if (logo) {
-     logo.src = isDark ? "./assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" : "./assets/IMAGENS/logo - tema claro.png";
-     }
+            if (logo) {
+                logo.src = isDark ? "../assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" : "../assets/IMAGENS/logo - tema claro.png";
+            }
 
-     if (perfilIcon) { // Nova condição
-     perfilIcon.src = isDark ? "./assets/IMAGENS/perfil.png" : "./assets/IMAGENS/perfil_preto.png"; // Assumindo que você tem uma imagem 'perfil-claro.png'
-     }
-     };
+            if (perfilIcon) { // Nova condição
+                perfilIcon.src = isDark ? "../assets/IMAGENS/perfil.png" : "../assets/IMAGENS/perfil_preto.png"; // Assumindo que você tem uma imagem 'perfil-claro.png'
+            }
+        };
 
-    // Troca o tema, atualiza texto, logo e salva no localStorage
-     document.addEventListener("DOMContentLoaded", function () {
-     const toggle = document.getElementById("themeToggle");
-     const label = document.querySelector(".switch-label");
+           // Troca o tema, atualiza texto, logo e salva no localStorage
+            document.addEventListener("DOMContentLoaded", function () {
+                const toggle = document.getElementById("themeToggle");
+                const label = document.querySelector(".switch-label");
                 const librasLabel = document.querySelector('#submenu-vlibras .switch-label');
-     const logo = document.getElementById("siteLogo");
-     const perfilIcon = document.getElementById("perfilIcon"); // Nova linha
+                const logo = document.getElementById("siteLogo");
+                const perfilIcon = document.getElementById("perfilIcon"); // Nova linha
 
-    if (toggle) {
-     toggle.addEventListener("change", function () {
-     const isDark = toggle.checked;
-     const newTheme = isDark ? "dark" : "light";
+                if (toggle) {
+                    toggle.addEventListener("change", function () {
+                        const isDark = toggle.checked;
+                        const newTheme = isDark ? "dark" : "light";
 
-     document.body.classList.remove("light-theme", "dark-theme");
-     document.body.classList.add(newTheme + "-theme");
+                        document.body.classList.remove("light-theme", "dark-theme");
+                        document.body.classList.add(newTheme + "-theme");
 
-     if (label) {
-    label.textContent = isDark ? "Tema Escuro" : "Tema Claro";
-     label.style.color = isDark ? "#fff" : "#000"; // Define a cor do texto da label
-     }
+                        if (label) {
+                            label.textContent = isDark ? "Tema Escuro" : "Tema Claro";
+                            label.style.color = isDark ? "#fff" : "#000"; // Define a cor do texto da label
+                        }
 
                         if (librasLabel) {
                             librasLabel.style.color = isDark ? "#fff" : "#000";
                         }
 
-     if (logo) {
-     logo.src = isDark ? "./assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" : "./assets/IMAGENS/logo - tema claro.png";
-     }
+                        if (logo) {
+                            logo.src = isDark ? "../assets/IMAGENS/Connect_Gamers_logo_OFICIAL-removebg-preview.png" : "../assets/IMAGENS/logo - tema claro.png";
+                        }
 
-     if (perfilIcon) { // Nova condição
-     perfilIcon.src = isDark ? "./assets/IMAGENS/perfil.png" : "./assets/IMAGENS/perfil_preto.png"; // Assumindo que você tem uma imagem 'perfil-claro.png'
-     }
+                        if (perfilIcon) { // Nova condição
+                            perfilIcon.src = isDark ? "../assets/IMAGENS/perfil.png" : "../assets/IMAGENS/perfil_preto.png"; // Assumindo que você tem uma imagem 'perfil-claro.png'
+                        }
 
-     localStorage.setItem("siteTheme", newTheme);
-     });
-   }
-     });
+                        localStorage.setItem("siteTheme", newTheme);
+                    });
+                }
+            });
     </script>
+
         <!-- botão vlibras -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -219,9 +225,10 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-<!-- Scripts -->
-<script src="../assets/JS/login.js"></script>
-<!-- Bootstrap Bundle com Popper para o menu ficar responsivo -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../JS/login.js"></script>
+    <!-- Bootstrap Bundle com Popper para o menu ficar responsivo -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
