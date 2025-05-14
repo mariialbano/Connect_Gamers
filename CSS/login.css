@@ -119,6 +119,29 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(24px);
 }
+.form-check-input {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+    border: 2px solid #ccc; /* Optional: Adjust the border color */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.form-check-input:checked {
+    background-color: rgb(253, 77, 121) !important;
+    border-color: rgb(220, 60, 100) !important;
+    box-shadow: 0 0 8px rgba(253, 77, 121, 0.8); /* Highlighted shadow when checked */
+}
+
+#usuario, #password {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    border: 1px solid #ccc; /* Optional: Adjust the border color */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#usuario:focus, #password:focus {
+    box-shadow: 0 4px 12px rgba(253, 77, 121, 0.5); /* Highlighted shadow on focus */
+    border-color: rgb(253, 77, 121); /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
 
 /* Temas */
 /* Tema Claro */
@@ -385,4 +408,3 @@ section {
         font-size: 1.1em;
     }
 }
-
