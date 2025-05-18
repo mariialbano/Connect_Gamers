@@ -200,6 +200,20 @@ section {
     justify-content: center;
 }
 
+.titulo-personalizado {
+    color: rgba(253, 77, 121, 1);
+    text-shadow: 1px 1px 3px rgba(253, 77, 121, 1);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    font-size: 4.5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 20px !important;
+    padding: 2px;
+}
+
 h4 {
     color: #fff;
     font-size: 1.5rem;
@@ -207,13 +221,18 @@ h4 {
     text-align: center;
 }
 
+td {
+    font-size: 20px;
+}
+
 summary {
     background-color: #1a1a1a;
     color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 1100px; /* Aumenta a largura máxima para 1200px */
     font-weight: 650;
+    letter-spacing: 1.5px;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1100px; /* Aumenta a largura máxima para 1200px */
     box-sizing: border-box;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -231,11 +250,11 @@ details {
 }
 
 details summary {
-    margin: 0 auto 19px auto;
-    text-align: center;
     font-size: 1.65rem;
     list-style: none;
-    position: relative
+    margin: 0 auto 19px auto;
+    position: relative;
+    text-align: center;
 }
 
 details .table-custom {
@@ -243,10 +262,7 @@ details .table-custom {
     overflow: hidden;
     opacity: 0;
     transform: translateY(-10px); /* sobe um pouco antes de abrir */
-    transition: 
-    max-height 0.6s ease,
-    opacity 0.6s ease,
-    transform 0.6s ease;
+    transition: max-height 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
 }
 
 details .table-custom tr {
@@ -271,15 +287,15 @@ details summary::-webkit-details-marker {
 }
 
 .details-content {
-max-height: 0;
-opacity: 0;
-overflow: hidden;
-transition: max-height 0.5s ease, opacity 0.5s ease;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
 .details-content.open {
-opacity: 1;
-  /* max-height será definido via JS dinamicamente */
+    opacity: 1;
+    /* max-height será definido via JS dinamicamente */
 }
 
 .container-games{
