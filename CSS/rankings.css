@@ -184,11 +184,58 @@ body.light-theme .submenu {
     border: 1px solid #ccc;
 }
 
-/*Tema escuro*/
-body.dark-theme {
-    background-color: #000;
-    color: #fff;
+/* Tema Claro - Summary dos jogos */
+body.light-theme details summary {
+    background-color: #ffffff;
+    color: #000;
+    letter-spacing: 1.5px;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1100px; /* Aumenta a largura máxima para 1200px */
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+body.light-theme details summary:hover {
+    background-color: rgba(253, 77, 121, 0.541);  
+    transform: scale(1.05); /* aumenta para 110% enquanto o mouse estiver sobre */
+    transition: transform 0.7s ease;
+}
+
+/* Tema Claro - Tabela completa */
+body.light-theme .table.table-dark,
+body.light-theme .table.table-dark thead,
+body.light-theme .table.table-dark tbody,
+body.light-theme .table.table-dark th,
+body.light-theme .table.table-dark td,
+body.light-theme .table.table-dark tr {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #dee2e6 !important;
+}
+
+/* Tema Claro - Cabeçalho com texto rosa */
+body.light-theme .table thead th {
+    background-color: #ffffff !important;
+    color: #e91e63 !important; /* rosa */
+    font-weight: bold;
+}
+
+/* Tema Claro - Linhas alternadas (striped) */
+body.light-theme .table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9 !important;
+}
+
+/* Tema Claro - Barra de progresso */
+body.light-theme progress {
+    accent-color: #e91e63; /* rosa ou outra cor desejada */
+}
+
+
+body.light-theme h4 {
+    color: #000;
+}
+
 
 /*Conteúdo principal*/
 section {
